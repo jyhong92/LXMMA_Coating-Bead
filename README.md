@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LX MMA Grade Specifications</title>
+    <title>Grades Line-up</title>
     <style>
         * {
             margin: 0;
