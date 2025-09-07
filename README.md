@@ -1,0 +1,400 @@
+[grade-table-interactive.html](https://github.com/user-attachments/files/22197277/grade-table-interactive.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LX MMA Grade Specifications</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f2f5;
+            padding: 20px;
+        }
+        
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #a91b1b 0%, #d63636 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        
+        .table-container {
+            padding: 30px;
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        thead {
+            background: #333;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        thead th {
+            padding: 15px 10px;
+            text-align: left;
+            font-weight: 500;
+            border-bottom: 3px solid #a91b1b;
+        }
+        
+        thead th:first-child {
+            width: 120px;
+        }
+        
+        tbody tr {
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        tbody tr:hover {
+            background: #fff5f5;
+            transform: translateX(3px);
+            box-shadow: 0 2px 5px rgba(169, 27, 27, 0.1);
+        }
+        
+        td {
+            padding: 12px 10px;
+        }
+        
+        .grade-code {
+            color: #a91b1b;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        
+        .polymer-type {
+            background: #f8f9fa;
+            padding: 4px 8px;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 12px;
+            color: #555;
+        }
+        
+        .property-value {
+            text-align: center;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .av-value {
+            text-align: center;
+            color: #666;
+        }
+        
+        .characteristics {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #555;
+        }
+        
+        /* BA와 BN 시리즈 구분 */
+        .series-separator {
+            background: linear-gradient(135deg, #a91b1b 0%, #d63636 100%);
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .series-separator td {
+            padding: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .table-container {
+                padding: 15px;
+            }
+            
+            table {
+                font-size: 12px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            thead th {
+                padding: 10px 5px;
+                font-size: 12px;
+            }
+            
+            td {
+                padding: 8px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>LX MMA Grade Specifications</h1>
+            <p>Complete Technical Data Sheet for Acrylic Bead Resins</p>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grade</th>
+                        <th>Polymer Type</th>
+                        <th style="text-align: center;">Tg (°C)</th>
+                        <th style="text-align: center;">MW (g/mol)</th>
+                        <th style="text-align: center;">A.V. / (H.V.)</th>
+                        <th>Main Characteristics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="series-separator">
+                        <td colspan="6">BA Series</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA122</td>
+                        <td><span class="polymer-type">MMA/n-BMA</span></td>
+                        <td class="property-value">60</td>
+                        <td class="property-value">60,000</td>
+                        <td class="av-value">4</td>
+                        <td class="characteristics">General purpose grade, Good adhesion and pigment dispersion, Fast solvent release</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA123</td>
+                        <td><span class="polymer-type">MMA/n-BMA</span></td>
+                        <td class="property-value">60</td>
+                        <td class="property-value">60,000</td>
+                        <td class="av-value">3.5</td>
+                        <td class="characteristics">General purpose grade, Higher viscosity version of BA122</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA124</td>
+                        <td><span class="polymer-type">MMA/n-BMA</span></td>
+                        <td class="property-value">60</td>
+                        <td class="property-value">60,000</td>
+                        <td class="av-value">8</td>
+                        <td class="characteristics">General purpose grade, Higher adhesion and pigment dispersion than BA122</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA126</td>
+                        <td><span class="polymer-type">MMA/n-BMA</span></td>
+                        <td class="property-value">60</td>
+                        <td class="property-value">50,000</td>
+                        <td class="av-value">9.5</td>
+                        <td class="characteristics">Faster organic solvent releasing version of BA124</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA140</td>
+                        <td><span class="polymer-type">MMA/EA</span></td>
+                        <td class="property-value">55</td>
+                        <td class="property-value">100,000</td>
+                        <td class="av-value">3.5</td>
+                        <td class="characteristics">Clear concrete coating, Excellent weatherability, High gloss</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA141</td>
+                        <td><span class="polymer-type">MMA/n-BMA</span></td>
+                        <td class="property-value">55</td>
+                        <td class="property-value">100,000</td>
+                        <td class="av-value">3</td>
+                        <td class="characteristics">Softer and low smell version of BA140</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA160</td>
+                        <td><span class="polymer-type">MMA/EA</span></td>
+                        <td class="property-value">60</td>
+                        <td class="property-value">110,000</td>
+                        <td class="av-value">6</td>
+                        <td class="characteristics">Suitable for PCM paints with PVDF</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA190</td>
+                        <td><span class="polymer-type">MMA/n-BMA</span></td>
+                        <td class="property-value">60</td>
+                        <td class="property-value">350,000</td>
+                        <td class="av-value">7</td>
+                        <td class="characteristics">Better mechanical strength and chemical resistance than BA124</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA320</td>
+                        <td><span class="polymer-type">MMA/n-BMA</span></td>
+                        <td class="property-value">75</td>
+                        <td class="property-value">65,000</td>
+                        <td class="av-value">7</td>
+                        <td class="characteristics">Better blocking resistance than BA123</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA330</td>
+                        <td><span class="polymer-type">MMA/n-BMA</span></td>
+                        <td class="property-value">75</td>
+                        <td class="property-value">70,000</td>
+                        <td class="av-value">0 / (4)</td>
+                        <td class="characteristics">Hydroxy modified acrylic resin for adhesive</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA400</td>
+                        <td><span class="polymer-type">MMA/n-BMA</span></td>
+                        <td class="property-value">85</td>
+                        <td class="property-value">15,000</td>
+                        <td class="av-value">3</td>
+                        <td class="characteristics">Excellent flowability with good hardness</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA410</td>
+                        <td><span class="polymer-type">MMA/n-BMA</span></td>
+                        <td class="property-value">80</td>
+                        <td class="property-value">40,000</td>
+                        <td class="av-value">3.5</td>
+                        <td class="characteristics">Harder but low Mw version of BA123, Clear finishes for furniture</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA411</td>
+                        <td><span class="polymer-type">MMA/n-BMA</span></td>
+                        <td class="property-value">85</td>
+                        <td class="property-value">35,000</td>
+                        <td class="av-value">5</td>
+                        <td class="characteristics">Harder and better glossy than BA410, Clear finishes for furniture</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA500</td>
+                        <td><span class="polymer-type">MMA/i-BMA</span></td>
+                        <td class="property-value">100</td>
+                        <td class="property-value">20,000</td>
+                        <td class="av-value">65</td>
+                        <td class="characteristics">Alcohol soluble type for general ink</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA525</td>
+                        <td><span class="polymer-type">MMA/EA</span></td>
+                        <td class="property-value">90</td>
+                        <td class="property-value">70,000</td>
+                        <td class="av-value">16</td>
+                        <td class="characteristics">Low profile additive for SMC/BMC, Excellent metal adhesion, Durability</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA531</td>
+                        <td><span class="polymer-type">MMA/n-BMA</span></td>
+                        <td class="property-value">105</td>
+                        <td class="property-value">100,000</td>
+                        <td class="av-value">2</td>
+                        <td class="characteristics">Hard coating resin with excellent durability, weatherability, and abrasion resistance</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA611</td>
+                        <td><span class="polymer-type">MMA</span></td>
+                        <td class="property-value">105</td>
+                        <td class="property-value">40,000</td>
+                        <td class="av-value">2</td>
+                        <td class="characteristics">General purpose hard resin with improved solubility, Calendaring varnish, PVC modifier</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA720</td>
+                        <td><span class="polymer-type">MMA</span></td>
+                        <td class="property-value">115</td>
+                        <td class="property-value">50,000</td>
+                        <td class="av-value">2</td>
+                        <td class="characteristics">Hard coating resin with low Mw, Excellent chemical resistance & weatherability</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BA840</td>
+                        <td><span class="polymer-type">MMA</span></td>
+                        <td class="property-value">120</td>
+                        <td class="property-value">120,000</td>
+                        <td class="av-value">2</td>
+                        <td class="characteristics">Highest hardness version of BA720 for Top coating</td>
+                    </tr>
+                    <tr class="series-separator">
+                        <td colspan="6">BN Series</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BN070</td>
+                        <td><span class="polymer-type">MMA/n-BMA</span></td>
+                        <td class="property-value">50</td>
+                        <td class="property-value">140,000</td>
+                        <td class="av-value">&lt;1</td>
+                        <td class="characteristics">Very Soft and Flexible grade, Suitable for flooring and hot seal layer</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BN080</td>
+                        <td><span class="polymer-type">MMA/n-BMA</span></td>
+                        <td class="property-value">50</td>
+                        <td class="property-value">180,000</td>
+                        <td class="av-value">&lt;1</td>
+                        <td class="characteristics">Very Soft and Flexible grade, Suitable for flooring and hot seal layer</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BN600</td>
+                        <td><span class="polymer-type">MMA</span></td>
+                        <td class="property-value">100</td>
+                        <td class="property-value">20,000</td>
+                        <td class="av-value">&lt;1</td>
+                        <td class="characteristics">Excellent flowability with good hardness</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BN640</td>
+                        <td><span class="polymer-type">MMA</span></td>
+                        <td class="property-value">100</td>
+                        <td class="property-value">100,000</td>
+                        <td class="av-value">&lt;1</td>
+                        <td class="characteristics">General PMMA beads, Excellent weatherability</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BN641</td>
+                        <td><span class="polymer-type">MMA</span></td>
+                        <td class="property-value">100</td>
+                        <td class="property-value">90,000</td>
+                        <td class="av-value">&lt;1</td>
+                        <td class="characteristics">General PMMA beads, Excellent weatherability</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BN650</td>
+                        <td><span class="polymer-type">MMA</span></td>
+                        <td class="property-value">110</td>
+                        <td class="property-value">130,000</td>
+                        <td class="av-value">&lt;1</td>
+                        <td class="characteristics">General PMMA beads, Excellent weatherability</td>
+                    </tr>
+                    <tr>
+                        <td class="grade-code">BN740/741</td>
+                        <td><span class="polymer-type">MMA</span></td>
+                        <td class="property-value">115</td>
+                        <td class="property-value">110,000</td>
+                        <td class="av-value">&lt;1</td>
+                        <td class="characteristics">General PMMA beads, Excellent weatherability</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
