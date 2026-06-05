@@ -240,8 +240,8 @@
                         <td class="grade-code">BA190</td>
                         <td><span class="polymer-type">MMA/n-BMA</span></td>
                         <td class="property-value">60</td>
-                        <td class="property-value">350,000</td>
-                        <td class="av-value">7</td>
+                        <td class="property-value">250,000</td>
+                        <td class="av-value">4</td>
                         <td class="characteristics">Better mechanical strength and chemical resistance than BA124</td>
                     </tr>
                     <tr>
